@@ -1,12 +1,10 @@
 import ExpenseList from "../../components/ExpenseList";
 import useExpenses from "../../hooks/useExpenses";
 
-
-
 const Dashboard = () => {
-  const {expenses, error, isLoading} = useExpenses();
+  const { expenses, error, isLoading } = useExpenses();
   return (
-    <div>
+    <div className="container">
       {isLoading && <p>Loading...</p>}
       {error && <p>(Network error)</p>}
       <ExpenseList expenses={expenses} />;
